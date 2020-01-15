@@ -1,0 +1,437 @@
+interlude: &default
+  filename: Hear_the_Noise_Sting.mp3
+  volume_transformation: -20  # volume up: +, volume down: -
+  # start: 0  # cut from [ms]
+  stop: 3558  # cut to [ms]
+  # fade_in: 2000
+  fade_out: 2000
+  clean: false
+
+beginning:
+  <<: *default
+
+ending:
+  <<: *default
+
+background:
+  filename: On_the_Bach.mp3
+
+default_sound_config:
+  clean: true
+  start: 200
+  # fade_in: 500
+  # after_cleaning_fade_in: 150
+  fade_in: 150
+
+default_silence_around_voice: 500
+
+background:
+  filename: On_the_Bach.mp3
+  clean: false
+  volume_transformation: -35
+  start: 3000
+  stop: -12750
+
+default_ania: &default_ania
+  default:
+    volume_transformation: +15
+
+dirs:
+  1:
+    name: Podcast 01, Aktywne Słuchanie
+    from: Mery
+    schedule:
+      - beginning
+      - 01*
+      - 02*
+      - interlude
+      - 03*
+      - 04*
+      - 05*
+      - 06*
+      - 07*
+      - interlude
+      - 08*
+      - 09*
+      - 10*
+      - 11*
+      - 12* #
+      - interlude
+      - 13*
+      - 14*
+      - 15*
+  2:
+    <<: *default_ania
+    name: Podcast 08, Inkluzywność
+    from: Ania
+    schedule:
+      - beginning
+      - 01*
+      - 02*
+      - interlude
+      - 03*
+      - 04*
+      - 05*
+      - 06*
+      - 07*
+      - 08*
+      - 09*
+      - 10*
+      - 11*
+      - interlude
+      - 12*
+      - 13*
+      - 14*
+      - interlude
+  3:
+    name: Podcast 02, Adaptacyjność
+    from: Mery
+    schedule:
+      - beginning
+      - 01*
+      - interlude
+      - 02*
+      - 03*
+      - 04*
+      - 05*
+      - 06*
+      - 07*
+      - interlude
+      - 08*
+      - 09*
+      - interlude
+      - 10*
+      - 11*
+      - 12*
+      - interlude
+  4:
+    <<: *default_ania
+    name: Podcast 09, Uczciwość
+    from: Ania
+    schedule:
+      - beginning
+      - 01*
+      - 02*
+      - interlude
+      - 03*
+      - 04*
+      - 05*
+      - 06*
+      - 07*
+      - interlude
+      - 08*
+      - 09*
+      - interlude
+      - 10*
+      - 11*
+      - 12*
+      - 13*
+      - 14*
+      # - 15*
+      - 16*
+      - 17*
+      - 18*
+      - 19*
+      - 20*
+      - interlude
+  5:
+    <<: *default_ania
+    name: Podcast 10, Otwartość na różnorodność
+    from: Ania
+    schedule:
+      - beginning
+      - 01*
+      - 02*
+      - 03*
+      - interlude
+      - 04*
+      - 05*
+      - 06*
+      - 07*
+      - 08*
+      - 09*
+      - 10*
+      - 11*
+      - interlude
+      - 12*
+      - 13*
+      - 14*
+      - 15*
+      - 16*
+      - 17*
+      - 18*
+      - interlude
+  6:
+    name: Podcast 03, Art of inquiry, sztuka zadawania pytań
+    from: Mery
+    schedule:
+      - beginning
+      - 01*
+      - 02*
+      - interlude
+      - 03*
+      - 04*
+      - 05*
+      - 06*
+      - 07*
+      - 08*
+      - 09*
+      - interlude
+      - 10*
+      - 11*
+      - 12*
+      - 13*
+      - 14*
+      - interlude
+  7:
+    name: Podcast 04, Creativity
+    from: Mery
+    schedule:
+      - beginning
+      - 01*
+      - 02*
+      - interlude
+      - 03*
+      - 04*
+      - interlude
+      - 05*
+      - 06*
+      - 07*
+      - 08*
+      - 09*
+      - interlude
+      - 10*
+      - 11*
+      - interlude
+      - 12*
+      - 13*
+      - interlude
+  8:
+    <<: *default_ania
+    name: Podcast 11, Pozytywne nastawienie
+    from: Ania
+    schedule:
+      - beginning
+      - 01-1*
+      - 01-2*
+      - 01-3*
+      - interlude
+      - 02*
+      - interlude
+      - 03*
+      - 04*
+      - 05*
+      - 06*
+      - 07*
+      - 08*
+      - 09*
+      - 10*
+      - 11*
+      - 12*
+      - 13*
+      - 14*
+      - 15*
+      - 16*
+      - 17*
+      - 18*
+      - 19*
+      - 20*
+      - 21*
+      - 22*
+      - interlude
+      - 23*
+      - 24*
+      - 25*
+      - 26*
+      - 27*
+      - interlude
+      - 28*
+      - interlude
+  9:
+    <<: *default_ania
+    name: Podcast 12, Szacunek do innych
+    from: Ania
+    schedule:
+      - beginning
+      - 01*
+      - 02*
+      - interlude
+      - 03*
+      - 04*
+      - 05*
+      - 06*
+      - 07*
+      - 08*
+      - 09*
+      - 10*
+      - 11*
+      - 12*
+      - 13*
+      - 14*
+      - 15*
+      - 16*
+      - 17*
+      - interlude
+      - 18*
+      - 19*
+      - 20*
+      - 21*
+      - interlude
+  10:
+    <<: *default_ania
+    name: Podcast 13, Samoświadomość
+    from: Ania
+    schedule:
+      - beginning
+      - 01*
+      - 02*
+      - 03*
+      - 04*
+      - interlude
+      - 05*
+      - 06*
+      - 07*
+      - 08*
+      - 09*
+      - 10*
+      - 11*
+      - 12*
+      - 13*
+      - 14*
+      - interlude
+      - 15*
+      - 16*
+      - 17*
+      - 18*
+      - interlude
+  11:
+    <<: *default_ania
+    name: Podcast 14, Motywacja wewnętrzna
+    from: Ania
+    schedule:
+      - beginning
+      - 01*
+      - 02*
+      - 03*
+      - interlude
+      - 04*
+      - 05*
+      - 06*
+      - 07*
+      - 08*
+      - 09*
+      - 10*
+      - 11*
+      - 12*
+      - 13*
+      - 14*
+      - interlude
+      - 15*
+      - 16*
+      - 17*
+      - 18*
+      - interlude
+  12:
+    <<: *default_ania
+    name: Podcast 15, Motywowanie do rozwoju
+    from: Ania
+    schedule:
+      - beginning
+      - 01*
+      - 02*
+      - 03*
+      - interlude
+      - 04*
+      - 05*
+      - 06*
+      - 07*
+      - 08*
+      - 09*
+      - 10*
+      - 11*
+      - 12*
+      - 13*
+      - 14*
+      - 15*
+      - 16*
+      - 17*
+      - 18*
+      - 19*
+      - 20*
+      - 21*
+      - 22*
+      - 23*
+      - 24*
+      - 25*
+      - 26*
+      - interlude
+      - 27*
+      - 28*
+      - 29*
+      - 30*
+      - interlude
+  13:
+    name: Podcast 05, Critical Thinking
+    from: Mery
+    schedule:
+      - beginning
+      - 01*
+      - 02*
+      - interlude
+      - 03*
+      - interlude
+      - 04*
+      - 05*
+      - 06*
+      - 07*
+      - 08*
+      - interlude
+      - 09*
+      - 10*
+      - 11*
+      - 12*
+      - interlude
+      - 13*
+      - interlude
+      - 14*
+      - interlude
+      - 15*
+  14:
+    name: Podcast 06, Empathy
+    from: Mery
+    schedule:
+      - beginning
+      - 01*
+      - interlude
+      - 02*
+      - 03*
+      - 04*
+      - interlude
+      - 05*
+      - 06*
+      - 07*
+      - interlude
+      - 08*
+      - interlude
+      - 09*
+      - interlude
+  15:
+    name: Podcast 07, Ethics
+    from: Mery
+    schedule:
+      - beginning
+      - 01*
+      - interlude
+      - 02*
+      - 03*
+      - 04*
+      - interlude
+      - 05*
+      - 06*
+      - 07*
+      - interlude
+      - 08*
+      - interlude
+      - 09*
+      - 10*
+      - interlude

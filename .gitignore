@@ -1,0 +1,6 @@
+*.mp3
+*.m4a
+*.flac
+__pycache__
+*.zip
+*.pyc
